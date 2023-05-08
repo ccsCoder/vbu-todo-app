@@ -1,0 +1,149 @@
+html, body {
+  min-height: 100%;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+  max-width: 80%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 30px;
+  width: 100%;
+}
+
+button:not(.dialog-button) {
+  background: transparent;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+}
+
+button#menu {
+  padding-left: 0;
+  margin-left: 0;
+  font-size: 3rem;
+}
+
+button.fab {
+  position: fixed;
+  height: 75px;
+  width: 75px;
+  bottom: 40px;
+  right: 40px;
+  border: 1px solid orange;
+  border-radius: 50%;
+  background: radial-gradient(circle at 10% 20%, rgb(255, 200, 124) 0%, rgb(252, 251, 121) 90%);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform .1s ease-in;
+}
+
+button.fab:hover {
+  transform: scale(1.1);
+}
+
+main {
+  /* max-width: 80%;
+  width: 50%; */
+  width: 100%;
+  min-height: 80%;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+li input[type="checkbox"] {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+li.completed {
+	background-color: #e5e5e5;
+  text-decoration: line-through;
+}
+
+li.completed input[type="checkbox"] {
+	text-decoration: line-through;
+}
+
+.delete-btn {
+	margin-left: auto;
+	background-color: #333;
+	color: #fff;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+#todo-list {
+  list-style-type: none;
+}
+
+#dialog {
+  border: 2px solid black;
+  background-color: lightgray;
+  border-radius: 10px;
+  max-width: 400px;
+  height: 200px;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 6;
+}
+
+#dialog > form > div {
+  margin-top: 30px;
+}
+
+.curtain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #333;
+  opacity: .8;
+  z-index: 5;
+  display: none;
+}
+
+.actions {
+  visibility: hidden;
+}
+
+#todo-list > li:hover .actions {
+  visibility: visible;
+}
+
+@keyframes disappearAnimation {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.disappear {
+  animation: disappearAnimation 1s ease-in;
+}

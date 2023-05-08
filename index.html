@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get stuff done...</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="curtain"></div>
+  <header>
+    <button id="menu">☰</button>
+    <h1>Get stuff done !</h1>
+  </header>
+  <main>
+    <ul id="todo-list">
+      <li>
+        <input type="checkbox" >
+        <span>Think ideas to take over world></span>
+        <div class="actions">
+          <button class="dialog-button action-button" data-action="edit">edit</button>
+          <button class="dialog-button action-button" data-action="delete">x</button>
+        </div>
+      </li>
+    </ul>
+  </main>
+  <section id="dialog">
+    <form>
+      <label>
+        Enter todo text
+        <input type="text" >
+      </label>
+      <div>
+        <button type="button" class="dialog-button submit">Add to list</button>
+        <button type="button" class="dialog-button cancel">Cancel</button>
+      </div>
+    </form>
+  </section>
+	<button class="fab">+</button>
+	<script src="js/index.js"></script>
+</body>
+</html>
